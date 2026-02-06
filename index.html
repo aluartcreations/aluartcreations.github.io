@@ -4,24 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AluArt Creations | Aluminum Fittings & Fabrication</title>
+  <title>AluArt Creations Private Limited | Aluminum Fittings & Fabrication</title>
 
-  <meta name="description" content="AluArt Creations offers premium aluminum fittings, partitions, doors, windows, railings, ACP work, and custom aluminum fabrication in Jaipur.">
-  <meta name="keywords" content="aluminum fittings, aluminum doors, aluminum windows, ACP work, aluminum partition, railing, fabrication Jaipur">
-
+  <meta name="description" content="AluArt Creations Private Limited offers premium aluminum fittings, ACP work, partitions, doors, windows, railings, and custom aluminum fabrication in Jaipur.">
+  <meta name="keywords" content="aluminum fittings Jaipur, ACP work, aluminum doors, aluminum windows, aluminum partition, railing fabrication">
   <link rel="canonical" href="https://aluartcreations.com">
 
+  <!-- Open Graph (WhatsApp / Social Preview) -->
+  <meta property="og:title" content="AluArt Creations Private Limited">
+  <meta property="og:description" content="Premium Aluminum Fittings & Fabrication in Jaipur">
+  <meta property="og:image" content="https://aluartcreations.com/assets/img/logo.png">
+
+  <!-- Bootstrap & Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Poppins', sans-serif; }
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
+    /* Navbar */
+    .navbar {
+      background: #1c1c1c;
+    }
+
+    .navbar-brand span {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #d4af37;
+    }
+
+    /* Hero Section */
     .hero-section {
-      padding: 100px 15px;
+      padding: 120px 15px;
       text-align: center;
-      background: linear-gradient(135deg, #2c2c2c, #5a5a5a);
-      color: #fff;
+      background: linear-gradient(135deg, #2b2b2b, #5a5a5a);
+      color: #ffffff;
+    }
+
+    .hero-section img {
+      max-width: 180px;
+      margin-bottom: 25px;
     }
 
     .hero-section h1 {
@@ -35,39 +59,59 @@
     }
 
     .btn-custom {
-      background: #cfa34a;
+      background: #d4af37;
       color: #000;
-      padding: 12px 25px;
       font-weight: 600;
+      padding: 12px 30px;
     }
 
     .btn-custom:hover {
-      background: #b8903e;
+      background: #c09b2c;
       color: #000;
     }
 
-    .map-wrapper iframe {
-      width: 100%;
-      height: 280px;
-      border: 0;
+    /* Services */
+    .card {
+      border: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
+    /* Map */
+    .map-wrapper iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    /* Footer */
     footer {
       background: #1c1c1c;
       color: #ccc;
-      padding: 20px 0;
+      padding: 30px 0;
     }
 
-    footer a { color: #cfa34a; text-decoration: none; }
+    footer img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">AluArt Creations</a>
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="assets/img/logo.png" alt="AluArt Creations Logo" height="45">
+      <span>AluArt Creations</span>
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -75,33 +119,34 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#products">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section class="hero-section">
   <div class="container">
-    <h1>Premium Aluminum Fittings & Fabrication</h1>
-    <p>Modern aluminum solutions for homes, offices & commercial spaces</p>
-    <a href="#contact" class="btn btn-custom mt-3">Get a Free Consultation</a>
+    <img src="assets/img/logo.png" alt="AluArt Creations Private Limited">
+    <h1>Aluminum Fittings & Fabrication Experts</h1>
+    <p>Modern aluminum solutions for homes, offices & commercial projects</p>
+    <a href="#contact" class="btn btn-custom mt-3">Get Free Consultation</a>
   </div>
 </section>
 
-<!-- Services Section -->
-<section id="products" class="py-5">
+<!-- SERVICES -->
+<section id="services" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-5">Our Aluminum Services</h2>
+    <h2 class="text-center mb-5">Our Services</h2>
 
     <div class="row">
       <div class="col-md-3 mb-4">
         <div class="card h-100 text-center">
           <div class="card-body">
-            <h5 class="card-title">Aluminum Doors & Windows</h5>
-            <p class="card-text">Durable, modern, and weather-resistant aluminum door & window solutions.</p>
+            <h5>Aluminum Doors & Windows</h5>
+            <p>Strong, stylish, and long-lasting aluminum doors & windows.</p>
           </div>
         </div>
       </div>
@@ -109,8 +154,8 @@
       <div class="col-md-3 mb-4">
         <div class="card h-100 text-center">
           <div class="card-body">
-            <h5 class="card-title">Aluminum Partitions</h5>
-            <p class="card-text">Office & home partitions with sleek aluminum frames.</p>
+            <h5>Aluminum Partitions</h5>
+            <p>Office & home partitions with premium aluminum frames.</p>
           </div>
         </div>
       </div>
@@ -118,8 +163,8 @@
       <div class="col-md-3 mb-4">
         <div class="card h-100 text-center">
           <div class="card-body">
-            <h5 class="card-title">ACP & Cladding Work</h5>
-            <p class="card-text">ACP sheet work, exterior cladding, and elevation solutions.</p>
+            <h5>ACP & Cladding Work</h5>
+            <p>ACP sheet work, elevation & exterior cladding solutions.</p>
           </div>
         </div>
       </div>
@@ -127,8 +172,8 @@
       <div class="col-md-3 mb-4">
         <div class="card h-100 text-center">
           <div class="card-body">
-            <h5 class="card-title">Railings & Custom Fabrication</h5>
-            <p class="card-text">Balcony railings, stair railings, and custom aluminum designs.</p>
+            <h5>Railings & Custom Fabrication</h5>
+            <p>Balcony railings, stair railings & custom aluminum designs.</p>
           </div>
         </div>
       </div>
@@ -136,7 +181,7 @@
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- CONTACT -->
 <section id="contact" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4">Contact Us</h2>
@@ -148,7 +193,7 @@
         </div>
 
         <p>
-          <strong>AluArt Creations</strong><br>
+          <strong>AluArt Creations Private Limited</strong><br>
           Second Floor, Agrasen Tower, S-44,<br>
           Sector 2, Central Spine,<br>
           Vidyadhar Nagar, Jaipur, Rajasthan 302039<br><br>
@@ -171,10 +216,11 @@
   </div>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <div class="container text-center">
-    <p>© 2025 AluArt Creations. All Rights Reserved.</p>
+    <img src="assets/img/logo.png" alt="AluArt Creations Logo">
+    <p>© 2025 AluArt Creations Private Limited. All Rights Reserved.</p>
     <p>
       <a href="tel:+919166689946">+91 91666 89946</a> |
       <a href="mailto:aluartcreations.info@gmail.com">aluartcreations.info@gmail.com</a>
@@ -182,6 +228,7 @@
   </div>
 </footer>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
