@@ -1,172 +1,212 @@
+/* ================================
+   AluArt Creations – Stylesheet
+   ================================ */
+
 :root {
-  --primary-color: #2563eb; /* Updated primary color */
-  --secondary-color: #4f46e5; /* Updated secondary color */
-  --dark-color: #1e293b; /* Updated dark color */
-  --light-color: #f8fafc; /* Updated light color */
-  --accent-color: #f59e0b; /* Accent color for highlights */
+  --gold: #c9a24d;
+  --gold-dark: #b18c3f;
+  --dark: #1c1c1c;
+  --text: #333;
+  --muted: #666;
+  --light: #f5f6f7;
+  --white: #ffffff;
 }
 
+/* RESET / BASE */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  color: var(--text);
+  background-color: var(--white);
+  line-height: 1.7;
 }
 
-/* Navbar */
+a {
+  text-decoration: none;
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
 .navbar {
-  background-color: var(--dark-color);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  font-weight: 700;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  background: var(--white);
+  border-bottom: 1px solid #eee;
 }
 
 .navbar-brand img {
-  height: 50px;
-  width: auto;
+  height: 45px;
 }
 
 .navbar-brand span {
-  font-size: 1.5rem;
-  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--dark);
 }
 
 .nav-link {
-  color: white !important;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  color: #444 !important;
+  font-weight: 500;
+  margin-left: 15px;
 }
 
-.nav-link:hover {
-  color: var(--accent-color) !important;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold) !important;
 }
 
-/* Hero Section */
+/* ================================
+   HERO SECTION
+   ================================ */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 150px 0;
+  padding: 110px 15px;
+  background: linear-gradient(135deg, #fafafa, #eeeeee);
   text-align: center;
 }
 
+.hero-section img {
+  max-width: 170px;
+  margin-bottom: 25px;
+}
+
 .hero-section h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  color: var(--dark);
 }
 
 .hero-section p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 750px;
+  margin: 15px auto 0;
 }
 
+/* ================================
+   BUTTONS
+   ================================ */
 .btn-custom {
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
+  background: var(--gold);
+  color: #000;
+  border-radius: 50px;
+  padding: 12px 34px;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-  background-color: var(--primary-color);
+  background: var(--gold-dark);
+  color: #000;
+  transform: translateY(-2px);
 }
 
-/* Cards */
+/* ================================
+   SECTION HEADINGS
+   ================================ */
+section h2 {
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ================================
+   SERVICES
+   ================================ */
+#services {
+  background: var(--light);
+}
+
 .card {
   border: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
 }
 
-/* Prevent card hover when interacting with image */
-.card-img-top,
-.carousel-inner img {
-  width: 100%;
-  object-fit: contain; /* Changed from cover to match your inline style */
-  max-height: 250px; /* Match your inline style */
-  border-radius: 8px 8px 0 0;
-  cursor: pointer;
-  position: relative;
-  z-index: 1; /* Ensure image is clickable */
+.card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.card:hover .card-img-top,
-.card:hover .carousel-inner img {
-  transform: none; /* Prevent image from moving with card hover */
+.card p {
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
-.card-img-top:hover,
-.carousel-inner img:hover {
-  transform: scale(1.05); /* Slight hover feedback on image only */
-  transition: transform 0.3s ease;
-}
-
-.card-body {
-  padding: 1.5rem;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.card-text {
-  font-size: 1rem;
-  color: var(--secondary-color);
-}
-
-/* Contact Section */
+/* ================================
+   CONTACT
+   ================================ */
 #contact {
-  padding: 80px 0;
-  background-color: white;
+  background: var(--white);
 }
 
-#contact .address-wrapper {
-  background: var(--light-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.map-wrapper iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
 }
 
-#contact .map-wrapper {
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 20px;
+.form-control {
+  border-radius: 14px;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
 }
 
-/* Footer */
+.form-control:focus {
+  border-color: var(--gold);
+  box-shadow: none;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
 footer {
-  background-color: var(--dark-color);
-  color: white;
+  background: #111;
+  color: #bbb;
   padding: 40px 0;
-  text-align: center;
+}
+
+footer img {
+  max-width: 120px;
+  margin-bottom: 12px;
+}
+
+footer p {
+  margin-bottom: 6px;
 }
 
 footer a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: var(--gold);
 }
 
 footer a:hover {
-  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* ================================
+   MOBILE OPTIMIZATION
+   ================================ */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .navbar-brand span {
+    font-size: 1.1rem;
+  }
 }
